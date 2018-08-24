@@ -28,26 +28,27 @@
 
       <h6>Toppings -<em> $1 each</em></h6>
       <div>
-        <input type="checkbox" id="mushrooms" name="feature" value="mushrooms" checked />
+        <input type="checkbox" id="mushrooms" name="feature" value="1" class="sum" />
         <label for="mushrooms">Mushrooms</label>
       </div>
 
       <div>
-        <input type="checkbox" id="olives" name="feature" value="olives" />
+        <input type="checkbox" id="olives" name="feature" value="1" class="sum" />
         <label for="olives">Olives</label>
       </div>
 
       <div>
-        <input type="checkbox" id="peppers" name="feature" value="peppers" />
+        <input type="checkbox" id="peppers" name="feature" value="1" class="sum" />
         <label for="peppers">Peppers</label>
       </div>
 
-        <button type="submit" class="btn btn-primary" id="submit">Submit for price</button>
-      </form>
+      <button type="submit" class="btn btn-primary" id="submit">Submit for price</button>
+    </form>
 
-      <div class="total">
-        <p>Your pizza will be $<span id="total"></span></p>
-      </div>
+    <div class="total">
+      <p>Your pizza will be $<span id="cost"></span></p>
     </div>
-  </body>
+
+  </div>
+</body>
 </html>
