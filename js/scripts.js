@@ -48,7 +48,7 @@ $(document).ready(function() {
     newPizzaOrder.size = pizzaSize;
     newPizzaOrder.toppings = totalToppings;
     newPizzaOrder.totalPrice();
-    $("#cost").text(newPizzaOrder.price);
+    $("#cost").text(newPizzaOrder);
     console.log(newPizzaOrder);
     $(".result").show();
   });
