@@ -19,34 +19,35 @@
     <form id="form">
 
       <h6>Select a size:</h6>
-      <select class="form-control" id="size">
+      <select class="form-control" id="pizza-size">
         <option></option>
-        <option>Small</option>
-        <option>Medium</option>
-        <option>Large</option>
+        <option>Small - $10</option>
+        <option>Medium - $15 </option>
+        <option>Large - $20</option>
       </select>
 
-      <h6>Toppings -<em> $1 each</em></h6>
+      <!-- <h6>Toppings -<em> $1 each</em></h6>
       <div>
-        <input type="checkbox" id="mushrooms" name="feature" value="1" class="sum" />
-        <label for="mushrooms">Mushrooms</label>
+        <input type="checkbox" id="mushrooms" name="feature" value="1" />
+        <label for="mushrooms">1</label>
       </div>
 
       <div>
-        <input type="checkbox" id="olives" name="feature" value="1" class="sum" />
-        <label for="olives">Olives</label>
+        <input type="checkbox" id="olives" name="feature" value="1" />
+        <label for="olives">2</label>
       </div>
 
       <div>
-        <input type="checkbox" id="peppers" name="feature" value="1" class="sum" />
-        <label for="peppers">Peppers</label>
-      </div>
+        <input type="checkbox" id="peppers" name="feature" value="1" />
+        <label for="peppers">3</label>
+      </div> -->
+
 
       <button type="submit" class="btn btn-primary" id="submit">Submit for price</button>
     </form>
 
     <div class="total">
-      <p>Your pizza will be $<span id="cost"></span></p>
+      <p>Total number of toppings <span id="toppings">___</span> so your pizza will cost $<span id="cost">___</span></p>
     </div>
 
   </div>
