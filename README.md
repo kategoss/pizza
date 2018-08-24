@@ -68,4 +68,4 @@ README
 
 ### License
 
-Copyright (c) 2018 **_Kate Goss_**
+Copyright (c) 2018 **Kate Goss**

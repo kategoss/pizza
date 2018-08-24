@@ -2,20 +2,24 @@
 <html>
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>PDX Pizza</title>
+  <title class="title">PDX Pizza</title>
 </head>
 <body>
   <h2>PDX Pizza</h2>
 
     <div class="container">
-      <h4>Welcome to PDX Pizza. All of our pizzas are gluten-free and come with organic local tomato-based pizza sauce and shredded alternative mozzarella cheese. Please select a size below and your toppings.</h4>
+    <div class="jumbotron">
+      <h4 id="welcome">Welcome to PDX Pizza </h4>
+      <h6>All of our pizzas are gluten-free and come with organic local tomato-based pizza sauce and shredded alternative mozzarella cheese. Please select a size below and your toppings.</h6>
+    </div>
 
       <form id="form">
 
-      <p>Select a size:</p>
+      <h6>Select a size:</h6>
       <select class="form-control" id="size">
         <option></option>
         <option>Small</option>
@@ -23,7 +27,7 @@
         <option>Large</option>
       </select>
 
-      <p>Toppings</p>
+      <h6>Toppings - $1 each</h6>
       <div>
         <input type="checkbox" id="mushrooms" name="feature" value="mushrooms" checked />
         <label for="mushrooms">Mushrooms</label>
@@ -43,7 +47,7 @@
 
       </form>
 
-      <div>
+      <div class="total">
         <p>Your pizza will be $<span id="total"></span></p>
       </div>
     </div>

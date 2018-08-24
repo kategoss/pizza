@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  display: none
+}
+
+#welcome {
+  text-align: center;
+  font-family: 'Carter One', cursive;
+  padding: 20px;
+}
+
+.total {
+  display: none;
+}
