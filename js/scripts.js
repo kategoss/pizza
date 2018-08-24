@@ -39,20 +39,16 @@ $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
 
+    var userSize = $("#pizza-size").val();
     var totalToppings = 0;
     $("input:checkbox[name=toppings]:checked").each(function() {
       totalToppings += parseInt($(this).val());
     })
 
-    var userSize = $("#pizza-size").val();
-
     var newPizzaOrder = new Pizza();
 
     newPizzaOrder.size = userSize;
-    // console.log(newPizzaOrder);
     newPizzaOrder.toppings = totalToppings;
-    // console.log(newPizzaOrder);
-    // newPizzaOrder.toppings = userToppings();
     newPizzaOrder.price = totalPrice();
     $("#cost").text(newPizzaOrder.price);
     console.log(newPizzaOrder);
