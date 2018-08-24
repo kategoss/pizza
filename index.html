@@ -9,15 +9,14 @@
   <title class="title">PDX Pizza</title>
 </head>
 <body>
-  <h2>PDX Pizza</h2>
 
-    <div class="container">
+  <div class="container">
     <div class="jumbotron">
       <h4 id="welcome">Welcome to PDX Pizza </h4>
-      <h6>All of our pizzas are gluten-free and come with organic local tomato-based pizza sauce and shredded alternative mozzarella cheese. Please select a size below and your toppings.</h6>
+      <h6>All of our pizzas are gluten-free and come with organic local tomato-based pizza sauce and shredded alternative mozzarella cheese. Please select a size and toppings below.</h6>
     </div>
 
-      <form id="form">
+    <form id="form">
 
       <h6>Select a size:</h6>
       <select class="form-control" id="size">
@@ -27,7 +26,7 @@
         <option>Large</option>
       </select>
 
-      <h6>Toppings - $1 each</h6>
+      <h6>Toppings -<em> $1 each</em></h6>
       <div>
         <input type="checkbox" id="mushrooms" name="feature" value="mushrooms" checked />
         <label for="mushrooms">Mushrooms</label>
@@ -44,7 +43,6 @@
       </div>
 
         <button type="submit" class="btn btn-primary" id="submit">Submit for price</button>
-
       </form>
 
       <div class="total">
