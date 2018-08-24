@@ -28,34 +28,9 @@ Pizza.prototype.userToppings = function() {
 }
 
 var totalPrice = function() {
-  return this.size += this.toppings;
+  this.size += this.toppings;
+  return;
 }
-
-
-//figure out how to add up values of checkboxes
-// ---------------------------------------
-// var totalToppings = function() {
-// }
-
-// function totalToppings() {
-// 		document.form.total.value = '';
-// 		var sum = 0;
-// 		for (i=0;i<document.form.checkbox.length;i++) {
-// 		  if (document.form.checkbox[i].checked) {
-// 		  	sum = sum + parseInt(document.form.checkbox[i].value);
-// 		  }
-// 		}
-// 		document.form.total.value = sum;
-// 	}
-// function calculate() {
-//   var el, i = 0;
-//   var total = 0;
-//   var number = 1;
-//   while(el = document.getElementsByName("feature")[i++]) {
-//     if(el.checked) {total = total + number;}
-//   }
-//   alert(total);
-// }
 
 
 // user interface logic
@@ -64,9 +39,9 @@ $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
 
-    var userToppings =
+    var totalToppings = 0;
     $("input:checkbox[name=toppings]:checked").each(function() {
-      userToppings += parseInt($(this).val());
+      totalToppings += parseInt($(this).val());
     })
 
     var userSize = $("#pizza-size").val();
@@ -75,14 +50,12 @@ $(document).ready(function() {
 
     newPizzaOrder.size = userSize;
     // console.log(newPizzaOrder);
-    newPizzaOrder.toppings = userToppings;
+    newPizzaOrder.toppings = totalToppings;
     // console.log(newPizzaOrder);
     // newPizzaOrder.toppings = userToppings();
     newPizzaOrder.price = totalPrice();
     $("#cost").text(newPizzaOrder.price);
     console.log(newPizzaOrder);
+    $(".result").show();
   });
-
-  $(".total").show();
-  // $("#submit").val("");
 });
