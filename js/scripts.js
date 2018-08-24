@@ -27,11 +27,9 @@ Pizza.prototype.userToppings = function() {
   }
 }
 
-var totalPrice = function() {
-  this.size += this.toppings;
-  return;
+Pizza.prototype.totalPrice = function() {
+  return this.size += this.toppings;
 }
-
 
 // user interface logic
 $(document).ready(function() {
@@ -39,7 +37,7 @@ $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
 
-    var userSize = $("#pizza-size").val();
+    var pizzaSize = $("#pizza-size").val();
     var totalToppings = 0;
     $("input:checkbox[name=toppings]:checked").each(function() {
       totalToppings += parseInt($(this).val());
@@ -47,9 +45,9 @@ $(document).ready(function() {
 
     var newPizzaOrder = new Pizza();
 
-    newPizzaOrder.size = userSize;
+    newPizzaOrder.size = pizzaSize;
     newPizzaOrder.toppings = totalToppings;
-    newPizzaOrder.price = totalPrice();
+    newPizzaOrder.totalPrice();
     $("#cost").text(newPizzaOrder.price);
     console.log(newPizzaOrder);
     $(".result").show();
