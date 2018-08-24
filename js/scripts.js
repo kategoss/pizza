@@ -1,34 +1,34 @@
 // business logic
 function Pizza() {
   this.size = [];
-  // this.toppings = 0;
-  this.price = [];
+  this.toppings = [];
+  this.price = 0;
 }
 
-Pizza.prototype.userSizePrice = function() {
+Pizza.prototype.userSize = function() {
   if (this.size === "Small - $10") {
-    return this.price = 10;
+    return this.size = 10;
   } else if (this.size === "Medium - $15") {
-    this.price = 15;
+    this.size = 15;
   } else if (this.size === "Large - $20") {
-    this.price = 20;
+    this.size = 20;
   }
 }
 
-// Pizza.prototype.userToppings = function() {
-//   if (this.toppings === "1") {
-//     this.price = 1;
-//   } else if (this.toppings === "2") {
-//     this.price = 2
-//   } else if (this.toppings === "3") {
-//     this.price = 3;
-//   } else {
-//     this.price = 0;
-//   }
-// }
+Pizza.prototype.userToppings = function() {
+  if (this.toppings === 1) {
+    this.toppings = 1;
+  } else if (this.toppings === 2) {
+    this.toppings = 2;
+  } else if (this.toppings === 3) {
+    this.toppings = 3;
+  } else {
+    this.toppings = 0;
+  }
+}
 
 var totalPrice = function() {
-  return this.price;
+  return this.size += this.toppings;
 }
 
 
@@ -61,25 +61,28 @@ var totalPrice = function() {
 // user interface logic
 $(document).ready(function() {
 
-  // var userToppings = $("input:radio[name=feature]:checked").val();
-
   $("#form").submit(function(event) {
     event.preventDefault();
+
+    var userToppings =
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      userToppings += parseInt($(this).val());
+    })
 
     var userSize = $("#pizza-size").val();
 
     var newPizzaOrder = new Pizza();
-    // pizzaOrder1.toppings = totalToppings();
-    // $("#toppings").text(pizzaOrder1.toppings);
-    //
-    newPizzaOrder.size = userSize;
-    // newPizzaOrder.size = userSize();
-    // // pizzaOrder1.userToppings();
-    newPizzaOrder.price = totalPrice();
-    $(".total").text(newPizzaOrder.price);
 
+    newPizzaOrder.size = userSize;
+    // console.log(newPizzaOrder);
+    newPizzaOrder.toppings = userToppings;
+    // console.log(newPizzaOrder);
+    // newPizzaOrder.toppings = userToppings();
+    newPizzaOrder.price = totalPrice();
+    $("#cost").text(newPizzaOrder.price);
+    console.log(newPizzaOrder);
   });
 
-  // $(".total").show();
+  $(".total").show();
   // $("#submit").val("");
 });

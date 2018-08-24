@@ -26,28 +26,24 @@
         <option>Large - $20</option>
       </select>
 
-      <!-- <h6>Toppings -<em> $1 each</em></h6>
-      <div>
-        <input type="checkbox" id="mushrooms" name="feature" value="1" />
-        <label for="mushrooms">1</label>
-      </div>
+      <h6>Toppings -<em> $1 each</em></h6>
+      <div class="form-group">
+        <input type="checkbox" id="mushrooms" name="toppings" value="1">
+        <label for="mushrooms">Mushrooms</label>
 
-      <div>
-        <input type="checkbox" id="olives" name="feature" value="1" />
-        <label for="olives">2</label>
-      </div>
+        <input type="checkbox" id="olives" name="toppings" value="1">
+        <label for="olives">Olives</label>
 
-      <div>
-        <input type="checkbox" id="peppers" name="feature" value="1" />
-        <label for="peppers">3</label>
-      </div> -->
+        <input type="checkbox" id="peppers" name="toppings" value="1">
+        <label for="peppers">Peppers</label>
+      </div>
 
 
       <button type="submit" class="btn btn-primary" id="submit">Submit for price</button>
     </form>
 
     <div class="total">
-      <p>Total number of toppings <span id="toppings">___</span> so your pizza will cost $<span id="cost">___</span></p>
+      <p>Your pizza will cost $<span id="cost">___</span></p>
     </div>
 
   </div>
